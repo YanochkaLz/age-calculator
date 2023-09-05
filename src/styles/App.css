@@ -1,0 +1,54 @@
+@import url('./normilize.css');
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../assets/fonts/Poppins-Regular.ttf');
+}
+
+.container {
+    font-family: Poppins-Bold;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f2f2f299;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    background-color: white;
+    padding: 50px;
+    border-radius: 1rem 1rem 2rem 1rem;
+}
+
+.input-block {
+    position: relative;
+}
+
+.input-fields {
+    display: flex;
+    gap: 40px;
+}
+
+.input-block label {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: grey;
+}
+
+.input-block input {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    max-width: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin-top: 10px;
+}
