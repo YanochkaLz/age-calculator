@@ -65,7 +65,7 @@ const CustomInput = ({ label = 'DAY', placeholder = 'DD', setData, setError }) =
                 {label}
                 <br></br>
             </label>
-            <input value={value} onChange={e => setValue(e.target.value)} id='input' placeholder={placeholder} type='text' />
+            <input autoComplete='off' value={value} onChange={e => setValue(e.target.value)} id='input' placeholder={placeholder} type='text' />
             {mistake &&
                 <div className='error-mess'>{mistake}</div>
             }

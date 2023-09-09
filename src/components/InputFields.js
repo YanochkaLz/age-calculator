@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import CustomInput from './CustomInput'
 import arrowImg from '../assets/images/icon-arrow.svg';
 
-const InputFields = () => {
+const InputFields = ({setGlobalData}) => {
 
   const [data, setData] = useState({
     day: '',
@@ -27,7 +27,7 @@ const InputFields = () => {
     }
     setError(false);
 
-    
+    setGlobalData(data);
   }
 
   return (

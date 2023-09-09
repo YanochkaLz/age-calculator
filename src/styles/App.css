@@ -24,7 +24,7 @@
 .block {
     background-color: white;
     padding: 50px;
-    border-radius: 1rem 1rem 2rem 1rem;
+    border-radius: 1rem 1rem 5rem 1rem;
 }
 
 .input-block {
