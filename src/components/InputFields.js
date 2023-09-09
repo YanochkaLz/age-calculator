@@ -31,7 +31,7 @@ const InputFields = ({setGlobalData}) => {
   }
 
   return (
-    <div >
+    <div style={{position: 'relative'}}>
       <div className='input-fields'>
         <CustomInput setError={setError} setData={setData} placeholder='DD' label='DAY' />
         <CustomInput setError={setError} setData={setData} placeholder='MM' label='MONTH' />

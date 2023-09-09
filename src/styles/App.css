@@ -13,9 +13,8 @@
 .container {
     font-family: Poppins-Bold;
     width: 100vw;
-    height: 100vh;
-    background-color: #f2f2f299;
-    overflow: hidden;
+    min-height: 100vh;
+    background-color: #6f6e6e6d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +23,9 @@
 .block {
     background-color: white;
     padding: 50px;
+    margin: 30px;
     border-radius: 1rem 1rem 5rem 1rem;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.588);
 }
 
 .input-block {
@@ -33,7 +34,8 @@
 
 .input-fields {
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 30px 40px;
 }
 
 .input-block label {
@@ -62,16 +64,16 @@
     position: absolute;
 }
 
-.input-block.mistakes input{
+.input-block.mistakes input {
     border-color: transparent;
     outline: 1px solid rgb(188, 83, 57);
 }
 
-.input-block.mistakes input:focus{
+.input-block.mistakes input:focus {
     outline: 2px solid rgb(188, 83, 57);
 }
 
-.input-block.mistakes label{
+.input-block.mistakes label {
     color: rgb(188, 83, 57);
 }
 
@@ -97,18 +99,18 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background-color .2s ease ;
+    transition: background-color .2s ease;
 }
 
 .submit-btn img {
-    transition: transform.2s ease ;
+    transition: transform.2s ease;
 }
 
 .submit-btn:hover {
     background-color: #854cffa8;
 }
 
-.submit-btn:hover img{
+.submit-btn:hover img {
     transform: translateY(10px);
 }
 
@@ -126,7 +128,19 @@
     line-height: 120%;
 }
 
-.custom-output span {
+.custom-output div {
     color: #864CFF;
     margin-right: 20px;
+    display: inline;
+}
+
+@media (max-width: 550px) {
+    .custom-output {
+        font-size: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 100%;
+        margin-bottom: 20px;
+    }
 }
