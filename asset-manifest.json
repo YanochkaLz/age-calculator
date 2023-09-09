@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/age-calculator/static/css/main.9c3ceaeb.css",
+    "main.js": "/age-calculator/static/js/main.6f8a6b35.js",
+    "static/media/Poppins-Regular.ttf": "/age-calculator/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-Bold.ttf": "/age-calculator/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "index.html": "/age-calculator/index.html",
+    "static/media/icon-arrow.svg": "/age-calculator/static/media/icon-arrow.76e952b1b427b84b83bd01f2f4822499.svg",
+    "main.9c3ceaeb.css.map": "/age-calculator/static/css/main.9c3ceaeb.css.map",
+    "main.6f8a6b35.js.map": "/age-calculator/static/js/main.6f8a6b35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c3ceaeb.css",
+    "static/js/main.6f8a6b35.js"
+  ]
+}
