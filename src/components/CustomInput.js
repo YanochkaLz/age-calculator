@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const CustomInput = ({ label = 'DAY', placeholder = 'DD', setData }) => {
+const CustomInput = ({ label = 'DAY', placeholder = 'DD', setData, setError }) => {
     const [value, setValue] = useState('');
     const [mistake, setMistake] = useState(false)
     const req = /[0-9]/;
@@ -14,32 +14,42 @@ const CustomInput = ({ label = 'DAY', placeholder = 'DD', setData }) => {
             case 'DAY':
                 if (!(val.length === 2 && val[0].match(req) && val[1].match(req) && val < 32 && val > 0)) {
                     setMistake('Must be a valid day')
+                    setError(true);
                     return;
                 }
+                setError(false);
                 setMistake(false)
-                setData(prev => ({...prev, day: val}));
+                setData(prev => ({ ...prev, day: val }));
                 break;
             case 'MONTH':
                 if (!(val.length === 2 && val[0].match(req) && val[1].match(req) && val < 13 && val > 0)) {
                     setMistake('Must be a valid month')
+                    setError(true);
                     return;
                 }
+                setError(false);
                 setMistake(false)
-                setData(prev => ({...prev, month: val}))
+                setData(prev => ({ ...prev, month: val }))
                 break;
             case 'YEAR':
                 if (!(val.length === 4)) {
                     setMistake('Must be a valid year')
+                    setError(true);
                     return;
                 }
+                setError(false);
                 const now = new Date();
                 let y = now.getFullYear();
                 if (!(y + 1 > val)) {
                     setMistake('Must be a valid year')
+                    setError(true);
                     return;
                 }
+                setError(false);
                 setMistake(false)
-                setData(prev => ({...prev, year: val}))
+                setData(prev => ({ ...prev, year: val }))
+                break;
+            default:
                 break;
         }
 

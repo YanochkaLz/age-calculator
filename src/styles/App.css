@@ -111,3 +111,11 @@
 .submit-btn:hover img{
     transform: translateY(10px);
 }
+
+.common-error {
+    position: absolute;
+    color: rgb(188, 83, 57);
+    margin-top: 50px;
+    font-family: Poppins-Regular;
+    font-size: 16px;
+}

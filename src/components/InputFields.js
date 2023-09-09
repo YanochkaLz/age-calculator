@@ -10,6 +10,8 @@ const InputFields = () => {
     year: ''
   })
 
+  const [error, setError] = useState(false)
+
   function checkDate(str) {
     str = str.split('.').reverse();
     let cur = new Date();
@@ -19,16 +21,23 @@ const InputFields = () => {
   }
 
   const handleSubmit = () => {
-    console.log(checkDate(`${data.day}.${data.month}.${data.year}`))
+    if(!checkDate(`${data.day}.${data.month}.${data.year}`) || error === true || !data.day.length || !data.month.length || !data.year.length) {
+      setError(true);
+      return;
+    }
+    setError(false);
+
+    
   }
 
   return (
     <div >
       <div className='input-fields'>
-        <CustomInput setData={setData} placeholder='DD' label='DAY' />
-        <CustomInput setData={setData} placeholder='MM' label='MONTH' />
-        <CustomInput setData={setData} placeholder='YYYY' label='YEAR' />
+        <CustomInput setError={setError} setData={setData} placeholder='DD' label='DAY' />
+        <CustomInput setError={setError} setData={setData} placeholder='MM' label='MONTH' />
+        <CustomInput setError={setError} setData={setData} placeholder='YYYY' label='YEAR' />
       </div>
+      {error && <p className='common-error'>That date doesn't exist!</p>}
       <div onClick={handleSubmit} className='input-btn'>
         <div className='grey-line'></div>
         <div className='submit-btn'>
