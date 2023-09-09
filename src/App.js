@@ -1,4 +1,5 @@
 import InputFields from './components/InputFields';
+import OutputFields from './components/OutputFields';
 import './styles/App.css';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className='container'>
       <div className='block'>
         <InputFields/>
+        <OutputFields/>
       </div>
     </div>
   );

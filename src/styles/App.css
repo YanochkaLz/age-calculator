@@ -119,3 +119,14 @@
     font-family: Poppins-Regular;
     font-size: 16px;
 }
+
+.custom-output {
+    font-family: Poppins-Bold;
+    font-size: 80px;
+    line-height: 120%;
+}
+
+.custom-output span {
+    color: #864CFF;
+    margin-right: 20px;
+}
