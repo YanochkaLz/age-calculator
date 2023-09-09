@@ -47,8 +47,67 @@
     position: relative;
     z-index: 1;
     max-width: 100px;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     border: 1px solid grey;
     margin-top: 10px;
+    font-size: 25px;
+}
+
+.input-block .error-mess {
+    color: rgb(188, 83, 57);
+    font-size: 12px;
+    font-family: Poppins-Regular;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.input-block.mistakes input{
+    border-color: transparent;
+    outline: 1px solid rgb(188, 83, 57);
+}
+
+.input-block.mistakes input:focus{
+    outline: 2px solid rgb(188, 83, 57);
+}
+
+.input-block.mistakes label{
+    color: rgb(188, 83, 57);
+}
+
+.input-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.grey-line {
+    height: 2px;
+    width: 50px;
+    background-color: rgb(225, 220, 220);
+    flex-grow: 1;
+}
+
+.submit-btn {
+    background-color: #864CFF;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color .2s ease ;
+}
+
+.submit-btn img {
+    transition: transform.2s ease ;
+}
+
+.submit-btn:hover {
+    background-color: #854cffa8;
+}
+
+.submit-btn:hover img{
+    transform: translateY(10px);
 }
